@@ -17,7 +17,7 @@ Template contains docker and nginx settings for both development and production.
 1. development: `docker-compose up -d --build` 
 2. production:  `docker-compose -f docker-compose.prod.yml up --build`
 
-When you run each of commands, automatically are run and other commands, such as:
+When you start project, automatically are run and other commands, such as:
 `python manage.py migrate`, `python manage.py flush`, `python manage.py collectstatic`
 
 You can control which commands to run initially, in entrypoint.sh or entrypoint.prod.sh, depending on mode you are on.
