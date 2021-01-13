@@ -11,7 +11,7 @@ Used tools and libraries:
 
 Template contains docker and nginx settings for both development and production.
 
-##### *Be sure you have installed docker on your system*
+### *Be sure you have installed docker on your system*
 
 > Guideline:
 1. development: `docker-compose up -d --build` 
