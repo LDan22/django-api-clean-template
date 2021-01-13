@@ -1,5 +1,5 @@
 # Django REST clean template
-###Django template for RESTful Web Services
+### Django template for RESTful Web Services
 
 *This is a clean template for fast deployment and development of a project*
 
