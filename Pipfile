@@ -15,6 +15,7 @@ django-cors-headers = "*"
 django-rest-knox = "*"
 pyyaml = "*"
 drf-yasg = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.8"

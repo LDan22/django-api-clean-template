@@ -18,12 +18,15 @@ from django.urls import path
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.conf import settings
+import debug_toolbar
+from django.urls import include
 
 schema_view = get_schema_view(
     openapi.Info(
         title="Backend API",
         default_version='v1',
-        description="APP API's",
+        description="APP APIs",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="admin@email.com"),
         license=openapi.License(name="APP License"),
@@ -39,3 +42,6 @@ urlpatterns = [
     path('api/redoc/', schema_view.with_ui(
         'redoc', cache_timeout=0), name='schema-redoc'),
 ]
+
+if settings.DEBUG:
+    urlpatterns = [path('api/__debug__/', include(debug_toolbar.urls))] + urlpatterns

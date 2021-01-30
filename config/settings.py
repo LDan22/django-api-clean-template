@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import socket
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'corsheaders',
+    'debug_toolbar',
 
     # Local
     'users.apps.UsersConfig',
@@ -60,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'django.middleware.cache.FetchFromCacheMiddleware', # cache
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 
 ]
 
@@ -214,3 +217,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 #     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #########################################################################################
+
+# django-debug-toolbar
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]

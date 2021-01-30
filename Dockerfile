@@ -10,8 +10,12 @@ RUN apt-get update \
 RUN apt-get upgrade -y && apt-get install postgresql gcc python3-dev musl-dev -y
 RUN pip install --upgrade pip
 
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+#COPY ./requirements.txt .
+#RUN pip install -r requirements.txt
+
+COPY ./Pipfile .
+COPY ./Pipfile.lock .
+RUN pip install pipenv && pipenv install --system
 
 COPY ./entrypoint.sh .
 
