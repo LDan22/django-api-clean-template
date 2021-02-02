@@ -7,6 +7,7 @@ Used tools and libraries:
 - Django REST Framework
 - Django REST Knox (Token authentication)
 - DRF-YASG (swagger)
+- Django debug toolbar
 - Docker
 
 Template contains docker and nginx settings for both development and production.
