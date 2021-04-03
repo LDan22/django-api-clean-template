@@ -15,7 +15,7 @@ Template contains docker and nginx settings for both development and production.
 ### Be sure you have installed docker on your system
 
 > Guideline:
-1. development: `docker-compose up -d --build` 
+1. development: `docker-compose up -d --build`
 2. production:  `docker-compose -f docker-compose.prod.yml up --build`
 
 When you start project, automatically are run and other commands, such as:
