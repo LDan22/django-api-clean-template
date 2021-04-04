@@ -1,4 +1,8 @@
-"""Users app"""
+"""
+Users app
+Module contains UsersApp configuration class
+"""
+
 from django.apps import AppConfig
 
 
