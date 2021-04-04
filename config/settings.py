@@ -135,6 +135,12 @@ DATABASES = {
     }
 }
 
+SQL_DATABASE = os.environ.get("SQL_DATABASE")
+SQL_USER = os.environ.get("SQL_USER")
+SQL_PASSWORD = os.environ.get("SQL_PASSWORD")
+SQL_HOST = os.environ.get("SQL_HOST")
+SQL_PORT = os.environ.get("SQL_PORT")
+
 #########################################################################################
 
 

@@ -84,6 +84,8 @@ repos:
             psycopg2-binary==2.8.6,
             pycparser==2.20,
             pyparsing==2.4.7,
+            pytest==6.2.3,
+            pytest-django==4.1.0,
             pytz==2020.5,
             PyYAML==5.3.1,
             requests==2.25.1,
@@ -95,7 +97,6 @@ repos:
             uritemplate==3.0.1,
             urllib3==1.26.2,
             whitenoise==5.2.0,
-
         ]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: 'v0.812'
@@ -132,6 +133,8 @@ repos:
             psycopg2-binary==2.8.6,
             pycparser==2.20,
             pyparsing==2.4.7,
+            pytest==6.2.3,
+            pytest-django==4.1.0,
             pytz==2020.5,
             PyYAML==5.3.1,
             requests==2.25.1,
@@ -145,3 +148,11 @@ repos:
             whitenoise==5.2.0,
 
         ]
+  - repo: local
+
+    hooks:
+      - id: tests
+        name: Run tests
+        entry: "bash tests.sh"
+        language: system
+        verbose: true

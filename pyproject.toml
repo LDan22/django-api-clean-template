@@ -28,4 +28,4 @@ multi_line_output = 3
 line_length = 88
 default_section = "THIRDPARTY"
 known_first_party = ["users"]
-known_third_party = ["debug_toolbar", "django", "drf_yasg", "knox", "rest_framework"]
+known_third_party = ["debug_toolbar", "django", "drf_yasg", "knox", "pytest", "rest_framework"]
